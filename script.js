@@ -35,15 +35,32 @@
   // 3. Close mobile nav on link click
   function closeNavOnClick() {
     if (navLinks.classList.contains('open')) {
-      navLinks.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      const menuIcon = navToggle.querySelector('.icon-menu');
-      const closeIcon = navToggle.querySelector('.icon-close');
-      if (menuIcon && closeIcon) {
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-      }
+      closeMobileNav();
     }
+  }
+
+  function closeMobileNav() {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    const menuIcon = navToggle.querySelector('.icon-menu');
+    const closeIcon = navToggle.querySelector('.icon-close');
+    if (menuIcon && closeIcon) {
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    }
+  }
+
+  function closeNavOnEscape(e) {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      closeMobileNav();
+      navToggle.focus();
+    }
+  }
+
+  function closeNavOnOutsideClick(e) {
+    if (!navLinks.classList.contains('open')) return;
+    if (navLinks.contains(e.target) || navToggle.contains(e.target)) return;
+    closeMobileNav();
   }
 
   // 4. Smooth scroll for anchor links
@@ -86,6 +103,8 @@
 
   // Event Listeners
   window.addEventListener('scroll', handleScroll, { passive: true });
+  document.addEventListener('keydown', closeNavOnEscape);
+  document.addEventListener('click', closeNavOnOutsideClick);
 
   if (navToggle) {
     navToggle.addEventListener('click', toggleNav);
