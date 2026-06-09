@@ -66,6 +66,12 @@ a:hover, a:focus-visible {
   color: var(--accent-hover);
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 ul {
   list-style: none;
 }
@@ -818,6 +824,14 @@ img, svg {
     text-align: left;
   }
 
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: min(100%, 18rem);
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -828,6 +842,11 @@ img, svg {
 
   .achievements-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-links {
+    gap: 1.25rem;
+    flex-wrap: wrap;
   }
 
   .timeline {
