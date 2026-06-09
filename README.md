@@ -13,14 +13,14 @@ portfolio/
 ├── index.html      # Main HTML file
 ├── style.css       # All styles (variables, grid, flexbox, responsive, animations)
 ├── script.js       # Navbar, smooth scroll, mobile menu, Intersection Observer
-├── resume.pdf      # Your resume (add this manually)
+├── G_Pranav_Ganesh_resume1.pdf
 └── README.md       # This file
 ```
 
 ## Quick Start (Local)
 
 1. Save all files into a folder.
-2. Add your `resume.pdf` into the same folder.
+2. Replace `G_Pranav_Ganesh_resume1.pdf` if you want to update the resume.
 3. Open `index.html` in any modern browser.
 
 ## Deploy on GitHub Pages (5 minutes)
@@ -43,16 +43,16 @@ portfolio/
 
 - **Dark mode** with a refined slate/sky palette
 - **Fully responsive** (mobile, tablet, desktop)
-- **Smooth scroll** navigation and fade-in animations
+- **Smooth scroll** navigation, achievements anchor, and fade-in animations
 - **Mobile hamburger menu**
-- **Accessible** with semantic HTML and keyboard-friendly links
+- **Accessible** with semantic HTML, keyboard-friendly links, and skip navigation
 - **Zero dependencies** (only Google Fonts: Inter)
 
 ## Customization
 
 - **Colors**: Edit the CSS variables in `:root` inside `style.css`.
 - **Content**: Update text directly in `index.html`.
-- **Resume**: Replace `resume.pdf` with your own.
+- **Resume**: Replace `G_Pranav_Ganesh_resume1.pdf` with your own PDF.
 - **Project images**: Replace the gradient divs in the projects section with `<img>` tags.
 
 ## Connect
