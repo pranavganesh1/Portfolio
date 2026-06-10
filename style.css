@@ -857,3 +857,56 @@ img, svg {
     left: calc(-1rem - 6px);
   }
 }
+
+@media print {
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --accent: #0369a1;
+    --border: #cbd5e1;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: #ffffff;
+  }
+
+  .navbar,
+  .hero-scroll-indicator,
+  .hero-socials,
+  .contact-links,
+  .skip-link {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-block: 2rem;
+    background: #ffffff;
+  }
+
+  .hero-title {
+    color: var(--text-primary);
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+
+  .section,
+  .contact {
+    padding-block: 1.5rem;
+    background: #ffffff;
+  }
+
+  .project-card,
+  .skill-card,
+  .achievement-card,
+  .exp-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
